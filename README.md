@@ -1,1 +1,2 @@
-C hello world
+Pointers, arrays and strings
+
