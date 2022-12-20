@@ -35,6 +35,7 @@ int main(void)
 			{
 				password[index] -= diff_half1;
 				break;
+
 			}
 		}
 	{
