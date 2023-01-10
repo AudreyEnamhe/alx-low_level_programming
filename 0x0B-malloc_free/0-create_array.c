@@ -1,37 +1,57 @@
+#include <stdio.h>
+		
+#include <stdlib.h>
+		
 #include "main.h"
+		
 /**
- *create_array - array for prints a string
- *@size: number elements array
- *@c: char
- *Return: pointer
+		
+ * _strdup - duplicate to new memory space location
+		
+ * @str: char
+		
+ * Return: 0
+		
  */
-
-char *create_array(unsigned int size, char c)
+		
+char *_strdup(char *str)
+		
 {
-char *buffer;
-unsigned int position;
+		
+	char *aaa;
+		
+	int i, r = 0;
+		
 
-if (size == 0)
-{
-return (NULL);
-}
+		
+	if (str == NULL)
+		
+		return (NULL);
+		
+	i = 0;
+		
+	while (str[i] != '\0')
+		
+		i++;
+		
 
-/*Define values with malloc*/
-buffer = (char *) malloc(size * sizeof(c));
+		
+	aaa = malloc(sizeof(char) * (i + 1));
+		
 
-if (buffer == 0)
-{
-return (NULL);
-}
+		
+	if (aaa == NULL)
+		
+		return (NULL);
+		
 
-else
-{
-position = 0;
-while (position < size) /*While for array*/
-{
-*(buffer + position) = c;
-position++;
-}
+		
+	for (r = 0; str[r]; r++)
+		
+		aaa[r] = str[r];
+		
 
-return (buffer);
+		
+	return (aaa);
+		
 }
