@@ -1,2 +1,1 @@
-Pointers, arrays and strings
-
+0x10. C - Variadic functions
